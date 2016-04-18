@@ -15,16 +15,6 @@ void setup() {
   Serial.println("Starting Regenbogen");
   FastLED.addLeds<NEOPIXEL, LED_PIN>(leds, LED_COUNT);
   FastLED.setBrightness(led_brightness);
-  for (uint8_t i = 0; i < 1; i++) {
-    for (uint8_t dot = 0; dot < LED_COUNT; dot++) {
-      leds[dot] = CRGB::Blue;
-      FastLED.show();
-      delay(20);
-      leds[dot + 1] = CRGB::Red;
-      FastLED.show();
-      delay(20);
-    }
-  }
 }
 
 void loop() {
